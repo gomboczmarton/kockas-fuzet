@@ -9,10 +9,10 @@ függetlenül fut le. Itt egyetlen hook van (a vázlat-szinten ennyi kell):
   "minden írás után ellenőrzés" szabály nem az agent fegyelmén múlik —
   a rendszer kényszeríti ki.
 
-Telepítés a felhasználó pénzügyi repójában:
-1. `settings-example.json` tartalma → `.claude/settings.json` (vagy
-   összefésülve a meglévővel);
-2. `chmod +x hooks/auto-ellenorzes.sh`.
+Bekötés: a repó `.claude/settings.json`-ja már tartalmazza — klónozás
+után azonnal él. Ha a harnesst egy meglévő saját repóba másolod át, a
+`.claude/settings.json` hooks-blokkját és ezt a mappát vidd magaddal
+(a szkript maradjon futtatható: `chmod +x .claude/hooks/auto-ellenorzes.sh`).
 
 Későbbi hook-jelöltek (M4): Stop-hook a hónap-zárás teljességi
 ellenőrzésére ("maradt-e kategorizálatlan tétel?"), PreToolUse-guard a

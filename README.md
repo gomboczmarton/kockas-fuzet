@@ -45,14 +45,14 @@ mintát — az ismert, helyes végeredményei a
 ## 2. lépcső: a segéd a TE táblázatoddal dolgozik
 
 Ha a csevegődet összekötöd a Google Drive-oddal/naptáraddal (pipálgatós
-engedélyezés, nem programozás), a [`skills/`](skills/) receptjei már a saját
+engedélyezés, nem programozás), a [`.claude/skills/`](.claude/skills/) receptjei már a saját
 családi kassza táblázatodban dolgoznak:
 
 | Skill | Mit csinál |
 |---|---|
-| [`kivonat-konyvelo`](skills/kivonat-konyvelo/SKILL.md) | Kivonat → kassza, duplikátum-védelemmel, a kategóriákat tőled tanulja |
-| [`havi-kor`](skills/havi-kor/SKILL.md) | Hónap eleji terv a saját számaidból + hónap végi zárás, ítélkezés nélkül |
-| [`visszateres`](skills/visszateres/SKILL.md) | Kihagyott hetek-hónapok bepótlása gyorsan, szemrehányás nélkül |
+| [`kivonat-konyvelo`](.claude/skills/kivonat-konyvelo/SKILL.md) | Kivonat → kassza, duplikátum-védelemmel, a kategóriákat tőled tanulja |
+| [`havi-kor`](.claude/skills/havi-kor/SKILL.md) | Hónap eleji terv a saját számaidból + hónap végi zárás, ítélkezés nélkül |
+| [`visszateres`](.claude/skills/visszateres/SKILL.md) | Kihagyott hetek-hónapok bepótlása gyorsan, szemrehányás nélkül |
 
 A táblázat-formátum és a beépített ellenőrző képletek leírása:
 [`templates/csaladi-kassza-sablon.md`](templates/csaladi-kassza-sablon.md).
@@ -63,14 +63,25 @@ Haladóknak (de nem programozóknak — itt is beszélgetsz): a
 [Claude Code](https://claude.com/claude-code)-dal a teljes rendszer a
 gépeden fut, egy `penzugy/` mappán:
 
-- [`commands/havizaras.md`](commands/havizaras.md) — egyetlen parancs, ami
+- [`havizaras`](.claude/commands/havizaras.md) — egyetlen parancs, ami
   levezényli a teljes havi zárást;
-- [`commands/belefer.md`](commands/belefer.md) — vásárlás előtti gyors kép;
-- [`agents/penzugyi-ellenor.md`](agents/penzugyi-ellenor.md) — a beépített
+- [`belefer`](.claude/commands/belefer.md) — vásárlás előtti gyors kép;
+- [`penzugyi-ellenor`](.claude/agents/penzugyi-ellenor.md) — a beépített
   ellenőr, aki minden számot a determinisztikus
   [`scripts/ellenorzo.py`](scripts/ellenorzo.py)-val számoltat újra;
-- [`hooks/`](hooks/) — automatikus ellenőrzés minden könyvelés után, hogy a
+- [`.claude/hooks/`](.claude/hooks/) — automatikus ellenőrzés minden könyvelés után, hogy a
   verifikáció ne emlékezeten múljon.
+
+Kipróbálás (kell hozzá: [Claude Code](https://claude.com/claude-code) és Python 3.11+):
+
+```bash
+git clone https://github.com/gomboczmarton/kockas-fuzet
+cd kockas-fuzet && claude
+> /havizaras 2026-07     # először az examples/ minta-adatokkal próbálkozik
+```
+
+A skillek, parancsok és az automatikus ellenőrző hook a `.claude/` mappában
+vannak — a klónozás után azonnal élnek, telepíteni nem kell semmit.
 
 A felépítés állapota és a „kész" kritériumai: [`BUILD-ORDER.md`](BUILD-ORDER.md).
 
@@ -92,7 +103,8 @@ Kísérlet vagy, nem kész termék — pont ezért vagy itt jó helyen:
 - **Mire használnád? Mi hiányzik?** Ezt egy rövid, 2 perces kérdőívben is
   elmondhatod *(link hamarosan)* — a válaszokból receptek lesznek.
 - **Fejlesztenél?** A `BUILD-ORDER.md` mutatja, hol tartunk; minden
-  változtatás előtt a minta-adatos ellenőrzésnek zölden kell futnia.
+  változtatás előtt az evaloknak zölden kell futniuk: `bash evals/run.sh`
+  (mit és miért tesztelnek: [`evals/README.md`](evals/README.md)).
 
 ## Licenc
 
