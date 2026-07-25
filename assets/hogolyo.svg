@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="A hógolyó-hatás: a lemaradás gyűlik, a Kockás Füzetnél nem">
+<rect width="1200" height="420" fill="#FDFCF8"></rect>
+<text x="24" y="40" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="26" fill="#23231F">Nem tudás hiányzik — a követés gyűlik össze.</text>
+<rect x="60" y="304" width="52" height="26" fill="#C9C2AE"></rect>
+<rect x="126" y="268" width="52" height="62" fill="#C9C2AE"></rect>
+<rect x="192" y="220" width="52" height="110" fill="#C9C2AE"></rect>
+<rect x="258" y="167" width="52" height="163" fill="#C9C2AE"></rect>
+<rect x="324" y="110" width="52" height="220" fill="#B5AC93"></rect>
+<line x1="40" y1="330.5" x2="440" y2="330.5" stroke="#DCD7C8"></line>
+<text x="40" y="360" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#6B675E">papír / tábla: a bepótolandó nő</text>
+<text x="40" y="384" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#A09A89">1. hó → 5. hó, amíg rá se nézel</text>
+<rect x="700" y="297" width="52" height="33" fill="#8FB39C"></rect>
+<rect x="766" y="304" width="52" height="26" fill="#8FB39C"></rect>
+<rect x="832" y="295" width="52" height="35" fill="#8FB39C"></rect>
+<rect x="898" y="306" width="52" height="24" fill="#8FB39C"></rect>
+<rect x="964" y="297" width="52" height="33" fill="#3F6B52"></rect>
+<line x1="680" y1="330.5" x2="1080" y2="330.5" stroke="#DCD7C8"></line>
+<text x="680" y="360" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#3F6B52">Kockás Füzet: a robotmunka nem gyűlik</text>
+<text x="680" y="384" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#A09A89">a kihagyás nem büntetés, hanem bepótlás</text>
+</svg>

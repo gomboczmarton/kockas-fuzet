@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420" role="img" aria-label="Belefér? döntési kártya">
+<rect width="900" height="420" fill="#FDFCF8"></rect>
+<rect x="24.5" y="24.5" width="851" height="371" fill="#FBF9F1" stroke="#CFC8B5"></rect>
+<text x="56" y="76" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="14" letter-spacing="3" fill="#8A8577">KERÉKPÁR · 89 000 FT</text>
+<text x="56" y="140" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="38" fill="#23231F">Belefér — ha a nyaralás-</text>
+<text x="56" y="186" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="38" fill="#23231F">keretből 20 000 átcsoportosul.</text>
+<line x1="56" y1="224.5" x2="844" y2="224.5" stroke="#DCD7C8"></line>
+<text x="56" y="256" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="14" fill="#6B675E">szabadidő keret maradt</text>
+<text x="56" y="292" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="26" fill="#23231F">69 000</text>
+<text x="480" y="256" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="14" fill="#6B675E">megtakarítási cél</text>
+<text x="480" y="292" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="26" fill="#23231F">nem érinti</text>
+<text x="56" y="356" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="14" fill="#8A8577">a döntés a tiéd · a szám az ellenorzo.py-ból, nem fejszámolásból</text>
+</svg>

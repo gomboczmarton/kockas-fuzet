@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kockás Füzet — oktató bemutató</title>
+<!--
+  Egyfájlos, offline oktató deck. Lapozás: → ← szóköz, vagy kattintás.
+  Nyomtatás / PDF: Ctrl+P — egy slide egy lapra, fekvő tájolásban.
+  Az ábrák az ../../assets/ mappából jönnek (a repóban relatív útvonalon).
+-->
+<style>
+  :root { --papir:#FBF9F1; --lap:#FDFCF8; --tabla:#F2EFE6; --keret:#CFC8B5;
+          --tinta:#23231F; --halk:#4A4740; --jel:#A09A89; --zold:#3F6B52; --vzold:#8FB39C; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; height:100%; background:#E7E3D8; overflow:hidden; }
+  body { font:400 17px/1.5 Georgia,'Times New Roman',serif; color:var(--tinta); }
+  .mono { font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace; }
+  #stage { position:fixed; inset:0; overflow:hidden; }
+  #deck { width:1920px; height:1080px; position:absolute; left:50%; top:50%;
+          transform-origin:center center; }
+  section { position:absolute; inset:0; background:var(--lap); padding:110px 130px;
+            display:none; flex-direction:column; border:1px solid var(--keret); }
+  section[data-on] { display:flex; }
+  section[data-layout="szabaly"] { background:#F3F6F2; border-color:var(--zold);
+            align-items:center; justify-content:center; text-align:center; }
+  h1 { font-size:112px; font-weight:400; margin:0; letter-spacing:-0.02em; line-height:1.02; }
+  h2 { font-size:64px; font-weight:400; margin:0 0 34px; line-height:1.1; }
+  p { font-size:40px; line-height:1.45; margin:0 0 26px; max-width:44ch; text-wrap:pretty; }
+  .kicsi { font-size:28px; color:var(--halk); }
+  .cimke { font-size:28px; letter-spacing:.18em; text-transform:uppercase; color:var(--jel); margin-bottom:auto; }
+  .vonal { height:5px; width:300px; background:var(--zold); margin:38px 0 0; }
+  .abra { flex:1; display:flex; align-items:center; justify-content:center; min-height:0; }
+  .abra img { width:100%; height:100%; object-fit:contain; }
+  .alatt { font-size:32px; color:var(--halk); margin:30px 0 0; max-width:none; }
+  .szabaly { font-size:88px; line-height:1.12; color:var(--zold); max-width:34ch; margin:0; }
+  .szabaly + .kicsi { margin-top:44px; font-size:32px; }
+  em { font-style:italic; }
+  #hud { position:fixed; right:22px; bottom:18px; font:400 13px/1 ui-monospace,Menlo,monospace;
+         color:#8A8577; letter-spacing:.1em; }
+  #nav { position:fixed; inset:0; display:flex; }
+  #nav b { flex:1; cursor:pointer; }
+  @media print {
+    html,body { overflow:visible; background:#fff; }
+    #stage,#hud,#nav { position:static; display:block; }
+    #deck { width:auto; height:auto; position:static; left:auto; top:auto; transform:none !important; }
+    section { position:relative; display:flex !important; inset:auto;
+              width:100%; height:186mm; break-after:page; border:none; padding:16mm; }
+    section[data-layout="szabaly"] { background:#F3F6F2 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    @page { size:A4 landscape; margin:8mm; }
+  }
+</style>
+</head>
+<body>
+<div id="stage"><div id="deck">
+
+  <section data-layout="cim" data-on>
+    <span class="cimke">Oktató bemutató · 2026</span>
+    <h1>Kockás Füzet</h1>
+    <p class="kicsi" style="font-size:44px;font-style:italic;margin-top:24px;max-width:none">a kockás füzet, ami visszaír</p>
+    <div class="vonal"></div>
+    <p class="mono kicsi" style="margin-top:40px;max-width:none">a robot nem számol · az adatod a tiéd · a pénzhez csak te nyúlsz</p>
+  </section>
+
+  <section data-layout="anekdota">
+    <span class="cimke">Egy hétköznapi eset</span>
+    <h2>Öt perc a havi zárás</h2>
+    <p><em>Június elsején</em> leültem havi zárást csinálni, és a beszélgetőablakban a robot megállított: a szokásos havi rendezvényemre most 15 ezer forint ment el a megszokott 8 helyett — ez most más volt, vagy csak drágult?</p>
+    <p>Jubileumi alkalom volt, írtam vissza. Elkönyvelte, a többi költésem stimmelt, öt perc múlva kész volt az elszámolásom.</p>
+    <p class="kicsi">Nem pénzügyi app. Egy AI-csevegő, aminek magyarul, sima mondatokban írom meg, mit szeretnék.</p>
+  </section>
+
+  <section data-layout="abra">
+    <span class="cimke">Miért bukik el a legtöbb próbálkozás</span>
+    <div class="abra"><img src="../../assets/hogolyo.svg" alt="A hógolyó-hatás: papíron a bepótolandó nő, itt a robotmunka nem gyűlik"></div>
+    <p class="alatt">Nem a tudás hiányzik. A követés a munka — és a kimaradás után a bepótolandó gyűlik.</p>
+  </section>
+
+  <section data-layout="szabaly">
+    <p class="szabaly">A robotmunkát a gép viszi. A döntés a tiéd.</p>
+    <p class="kicsi mono">ez az egész gyűjtemény egy mondatban</p>
+  </section>
+
+  <section data-layout="abra">
+    <span class="cimke">A három alapszabály</span>
+    <div class="abra"><img src="../../assets/harom-szabaly.svg" alt="A robot nem számol, az adatod a tiéd, a pénzhez csak te nyúlsz"></div>
+    <p class="alatt">Ez a három elv minden receptben, minden riportban és minden ábrán visszatér.</p>
+  </section>
+
+  <section data-layout="abra">
+    <span class="cimke">Hol szállj be</span>
+    <div class="abra"><img src="../../assets/harom-lepcso.svg" alt="Három lépcső: recept, összekötés, saját gép"></div>
+    <p class="alatt">Az első lépcső ma este letudható, ingyen, telepítés nélkül. A harmadikhoz sem kell programozni — ott is beszélgetsz.</p>
+  </section>
+
+  <section data-layout="anekdota">
+    <span class="cimke">A határ, amit érdemes megérteni</span>
+    <h2>Amikor a robot már a naptáradba ír</h2>
+    <p>Attila feltöltötte a banki ajánlat PDF-jét a csevegőbe, és megkérdezte, melyik lekötés való neki. Megkapta az összehasonlítást, döntött.</p>
+    <p>Aztán a gép megjegyezte: érdemes lenne emlékeztetőt felvenni a lejáratra. Mire Attila: <em>mi lenne, ha te vennéd fel?</em></p>
+    <p class="kicsi">A csevegő válaszol. Az ügynök megcsinál valamit — a te szabályaid szerint, a te jóváhagyásoddal.</p>
+  </section>
+
+  <section data-layout="abra">
+    <span class="cimke">Havi zárás</span>
+    <div class="abra"><img src="../../assets/terv-teny.svg" alt="Terv–tény szalag: a szabadidő keret túllépése sárgával"></div>
+    <p class="alatt">A túllépés <strong>sárga és kérdés</strong> — sosem piros és vád: egyszeri volt, vagy igazítsuk a keretet?</p>
+  </section>
+
+  <section data-layout="abra">
+    <span class="cimke">Az ellenőrzés nem bizalmatlanság</span>
+    <div class="abra"><img src="../../assets/ellenor-pecset.svg" alt="Ellenőrizve, illetve döntést kér — a két állapot"></div>
+    <p class="alatt">A számot script vagy táblázat-képlet adja, nem a gép fejszámolása. Két állapot van: ellenőrizve, illetve döntést kér.</p>
+  </section>
+
+  <section data-layout="abra">
+    <span class="cimke">Kihagytál hónapokat?</span>
+    <div class="abra"><img src="../../assets/visszateres-naptar.svg" alt="Három üres kocka bepótolva — a győzelem az, hogy visszatértél"></div>
+    <p class="alatt">Nincs „megint", nincs „sajnos", nincs lista a hátralékról. Csak bepótlás, egy körben.</p>
+  </section>
+
+  <section data-layout="szabaly">
+    <p class="szabaly">Kísérlet, nem kész termék. Szólj bele.</p>
+    <p class="kicsi mono">github.com/gomboczmarton/kockas-fuzet · MIT</p>
+  </section>
+
+</div></div>
+
+<div id="nav"><b data-dir="-1"></b><b data-dir="1"></b></div>
+<div id="hud"><span id="szam">1</span> / <span id="ossz">1</span> · ← →</div>
+
+<script>
+(function(){
+  var deck = document.getElementById('deck');
+  var slides = [].slice.call(deck.querySelectorAll('section'));
+  var i = 0;
+  document.getElementById('ossz').textContent = slides.length;
+  try { var s = +localStorage.getItem('kf-deck-slide'); if (s > 0 && s < slides.length) i = s; } catch(e){}
+  function show(n){
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function(s, k){ if (k === i) s.setAttribute('data-on',''); else s.removeAttribute('data-on'); });
+    document.getElementById('szam').textContent = i + 1;
+    try { localStorage.setItem('kf-deck-slide', i); } catch(e){}
+  }
+  function fit(){
+    var pad = 40;
+    var k = Math.min((innerWidth - pad) / 1920, (innerHeight - pad) / 1080);
+    deck.style.transform = 'translate(-50%,-50%) scale(' + k + ')';
+  }
+  addEventListener('resize', fit); fit(); show(i);
+  addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { show(i + 1); e.preventDefault(); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { show(i - 1); e.preventDefault(); }
+    if (e.key === 'Home') show(0);
+    if (e.key === 'End') show(slides.length - 1);
+  });
+  [].slice.call(document.querySelectorAll('#nav b')).forEach(function(b){
+    b.addEventListener('click', function(){ show(i + (+b.dataset.dir)); });
+  });
+})();
+</script>
+</body>
+</html>

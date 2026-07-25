@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="1200" height="260" role="img" aria-label="A három alapszabály">
+<rect width="1200" height="260" fill="#FDFCF8"></rect>
+
+<rect x="24.5" y="40.5" width="352" height="176" fill="#FBF9F1" stroke="#CFC8B5"></rect>
+<text x="52" y="80" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="14" fill="#A09A89">01</text>
+<text x="52" y="126" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="30" fill="#23231F">A robot nem</text>
+<text x="52" y="162" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="30" fill="#23231F">számol</text>
+<text x="52" y="196" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="14" fill="#6B675E">képlet vagy script</text>
+
+<rect x="400.5" y="40.5" width="352" height="176" fill="#FBF9F1" stroke="#CFC8B5"></rect>
+<text x="428" y="80" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="14" fill="#A09A89">02</text>
+<text x="428" y="126" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="30" fill="#23231F">Az adatod</text>
+<text x="428" y="162" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="30" fill="#23231F">a tiéd</text>
+<text x="428" y="196" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="14" fill="#6B675E">nincs szerver, nincs regisztráció</text>
+
+<rect x="776.5" y="40.5" width="352" height="176" fill="#FBF9F1" stroke="#CFC8B5"></rect>
+<text x="804" y="80" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="14" fill="#A09A89">03</text>
+<text x="804" y="126" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="30" fill="#23231F">A pénzhez</text>
+<text x="804" y="162" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="30" fill="#23231F">csak te nyúlsz</text>
+<text x="804" y="196" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="14" fill="#6B675E">ő javasol, te utalsz</text>
+</svg>

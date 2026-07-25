@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="1200" height="260" role="img" aria-label="Ellenőr-pecsét: ellenőrizve, illetve döntést kér">
+<rect width="1200" height="260" fill="#FDFCF8"></rect>
+<rect x="24.5" y="24.5" width="1151" height="96" fill="#F3F6F2" stroke="#3F6B52"></rect>
+<circle cx="70" cy="72" r="18" fill="#3F6B52"></circle>
+<text x="70" y="79" text-anchor="middle" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="19" fill="#F3F6F2">✓</text>
+<text x="108" y="66" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="24" fill="#23231F">Minden szám ellenőrizve</text>
+<text x="108" y="98" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#3F6B52">ellenorzo.py · 2026-07 · egyenleg-változás +285 970 · egyezik a bankkal</text>
+<rect x="24.5" y="140.5" width="1151" height="96" fill="#FBF6E7" stroke="#D8C48F"></rect>
+<circle cx="70" cy="188" r="18" fill="#C9A642"></circle>
+<text x="70" y="195" text-anchor="middle" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="19" fill="#FBF6E7">?</text>
+<text x="108" y="182" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="24" fill="#23231F">Egy tétel eldöntésre vár</text>
+<text x="108" y="214" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#8A6F1E">duplikátum-gyanú: 2026-07-08 · LIDL · –8 940 — te döntesz</text>
+</svg>

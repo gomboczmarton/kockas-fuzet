@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 700" width="1140" height="700" role="img" aria-label="Négy slide-layout: cím, anekdota, szabály, ábra">
+<rect width="1140" height="700" fill="#FDFCF8"></rect>
+<rect x="24.5" y="24.5" width="540" height="304" fill="#FBF9F1" stroke="#CFC8B5"></rect><text x="60" y="250" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="40" fill="#23231F">Cím-lap</text><rect x="62" y="272" width="96" height="4" fill="#3F6B52"></rect>
+<rect x="576.5" y="24.5" width="540" height="304" fill="#FBF9F1" stroke="#CFC8B5"></rect><text x="612" y="120" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="24" font-style="italic" fill="#4A4740">Anekdota-lap</text><rect x="612" y="150" width="440" height="10" fill="#E8E3D4"></rect><rect x="612" y="176" width="360" height="10" fill="#E8E3D4"></rect><rect x="612" y="202" width="400" height="10" fill="#E8E3D4"></rect>
+<rect x="24.5" y="368.5" width="540" height="304" fill="#F3F6F2" stroke="#3F6B52"></rect>
+<text x="294" y="510" text-anchor="middle" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="34" fill="#3F6B52">Szabály-lap</text>
+<text x="294" y="548" text-anchor="middle" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#3F6B52">egy mondat, nagyban — az egyetlen színes layout</text>
+<rect x="576.5" y="368.5" width="540" height="304" fill="#FBF9F1" stroke="#CFC8B5"></rect><rect x="640" y="560" width="90" height="80" fill="#C9C2AE"></rect><rect x="760" y="500" width="90" height="140" fill="#C9C2AE"></rect><rect x="880" y="440" width="90" height="200" fill="#3F6B52"></rect><text x="612" y="420" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#6B675E">Ábra-lap</text>
+</svg>

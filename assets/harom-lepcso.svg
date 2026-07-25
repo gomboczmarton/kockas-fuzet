@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-label="A három lépcső: recept, összekötés, saját gép">
+<rect width="1200" height="440" fill="#FDFCF8"></rect>
+<text x="24" y="36" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="14" letter-spacing="2" fill="#A09A89">HOL SZÁLLJ BE</text>
+
+<rect x="24.5" y="250.5" width="352" height="150" fill="#FBF9F1" stroke="#CFC8B5"></rect>
+<text x="52" y="328" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="30" fill="#23231F">1 · Recept</text>
+<text x="52" y="358" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#6B675E">10 perc, telepítés nélkül</text>
+<text x="52" y="382" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#6B675E">bemásolod a csevegőbe</text>
+
+<rect x="400.5" y="160.5" width="352" height="240" fill="#FBF9F1" stroke="#CFC8B5"></rect>
+<text x="428" y="328" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="30" fill="#23231F">2 · Összekötés</text>
+<text x="428" y="358" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#6B675E">pipálgatás, nem programozás</text>
+<text x="428" y="382" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#6B675E">a te táblázatod, a te naptárad</text>
+
+<rect x="776.5" y="70.5" width="352" height="330" fill="#F3F6F2" stroke="#3F6B52"></rect>
+<text x="804" y="328" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="30" fill="#23231F">3 · Saját gép</text>
+<text x="804" y="358" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#3F6B52">minden adat nálad marad</text>
+<text x="804" y="382" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#3F6B52">parancsok, ellenőr, hookok</text>
+<line x1="24" y1="400.5" x2="1176" y2="400.5" stroke="#DCD7C8"></line>
+</svg>
