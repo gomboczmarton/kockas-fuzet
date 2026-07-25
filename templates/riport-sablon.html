@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Havi zárás — {{HONAP}} · Kockás Füzet</title>
+<!--
+  Kockás Füzet — havi riport sablon.
+  A harness ezt a fájlt tölti ki és mentse el a penzugy/riportok/ mappába.
+  Szabályok: minden szám az ellenorzo.py kimenetéből jön; a túllépés sárga,
+  soha nem piros; a lábléc mindig mutatja a forrást és a futás idejét.
+  Helyettesítendő jelölések: {{HONAP}}, {{JOL_MENT}}, {{BEVETEL}}, {{KIADAS}},
+  {{EGYENLEG}}, {{SOROK}} (egy <tr> kategóriánként), {{JAVASLAT_1}},
+  {{JAVASLAT_2}}, {{ELLENOR_ALLAPOT}}, {{ELLENOR_RESZLET}}, {{GENERALVA}}.
+  Nincs benne script és nincs külső kérés — offline, nyomtatható.
+-->
+<style>
+  :root { --papir:#FBF9F1; --lap:#FDFCF8; --tabla:#F2EFE6; --keret:#CFC8B5;
+          --tinta:#23231F; --halk:#4A4740; --mono:#6B675E; --jel:#A09A89;
+          --zold:#3F6B52; --vzold:#8FB39C; --sarga:#E8C76A; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--tabla); color:var(--tinta);
+         font:400 17px/1.6 Georgia,'Times New Roman',serif; padding:40px 20px; }
+  main { max-width:820px; margin:0 auto; background:var(--lap);
+         border:1px solid var(--keret); padding:44px 48px 32px; }
+  .mono { font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace; }
+  header { border-bottom:1px solid var(--keret); padding-bottom:18px;
+           display:flex; justify-content:space-between; align-items:baseline; gap:16px; }
+  h1 { font-size:34px; font-weight:400; margin:0; letter-spacing:-0.01em; }
+  h2 { font-size:23px; font-weight:400; margin:38px 0 14px; }
+  h2.jo { color:var(--zold); }
+  p { margin:0 0 12px; max-width:62ch; text-wrap:pretty; }
+  table { width:100%; border-collapse:collapse; margin:8px 0 6px;
+          font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace; font-size:14px; }
+  th { text-align:left; font-weight:500; color:var(--jel); letter-spacing:.08em;
+       text-transform:uppercase; font-size:11px; padding:0 0 8px; }
+  td { padding:9px 0; border-top:1px solid #E6E1D2; vertical-align:middle; }
+  td.szam { text-align:right; white-space:nowrap; }
+  .savtart { display:block; height:12px; background:#EEEADE;
+             border:1px solid #DED8C6; width:220px; }
+  .savtart i { display:block; height:100%; background:var(--vzold); float:left; }
+  .savtart i.tul { background:var(--sarga); }
+  .kerdes { color:#8A6F1E; font-size:13px; }
+  .osszegzo { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:20px 0 4px; }
+  .osszegzo div { border:1px solid var(--keret); background:var(--papir); padding:14px 16px; }
+  .osszegzo span { display:block; }
+  .osszegzo .cimke { font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--jel); }
+  .osszegzo .ertek { font-size:22px; margin-top:6px; }
+  .pecset { display:flex; gap:14px; align-items:center; margin:30px 0 0;
+            border:1px solid var(--zold); background:#F3F6F2; padding:15px 18px; }
+  .pecset .kor { width:26px; height:26px; border-radius:50%; background:var(--zold);
+                 color:#F3F6F2; display:flex; align-items:center; justify-content:center;
+                 font-size:14px; flex:none; }
+  footer { margin-top:26px; border-top:1px solid var(--keret); padding-top:14px;
+           font-size:12px; color:var(--jel); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  @media print {
+    body { background:#fff; padding:0; }
+    main { border:none; max-width:none; padding:0; }
+    @page { margin:18mm; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>{{HONAP}} · havi zárás</h1>
+    <span class="mono" style="font-size:12px;color:var(--mono)">offline · egy fájl</span>
+  </header>
+
+  <div class="osszegzo">
+    <div><span class="cimke">Bevétel</span><span class="ertek mono">{{BEVETEL}}</span></div>
+    <div><span class="cimke">Kiadás</span><span class="ertek mono">{{KIADAS}}</span></div>
+    <div><span class="cimke">Egyenleg-változás</span><span class="ertek mono">{{EGYENLEG}}</span></div>
+  </div>
+
+  <h2 class="jo">1. Ami jól ment</h2>
+  <p>{{JOL_MENT}}</p>
+
+  <h2>2. Eltérések — számokkal, ítélet nélkül</h2>
+  <table>
+    <thead><tr><th>Kategória</th><th>Terv / tény</th><th></th><th class="szam">Eltérés</th></tr></thead>
+    <tbody>
+      <!-- {{SOROK}} — minta-sorok, a generálás cserélje le őket: -->
+      <tr>
+        <td>élelmiszer</td>
+        <td class="mono">99 450 / 100 000</td>
+        <td><span class="savtart"><i style="width:83%"></i></span></td>
+        <td class="szam">+550</td>
+      </tr>
+      <tr>
+        <td>szabadidő<br><span class="kerdes">egyszeri volt, vagy igazítsuk a keretet?</span></td>
+        <td class="mono">15 000 / 10 000</td>
+        <td><span class="savtart"><i style="width:62%"></i><i class="tul" style="width:31%"></i></span></td>
+        <td class="szam">–5 000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3. Legfeljebb két javaslat</h2>
+  <p>{{JAVASLAT_1}}</p>
+  <p>{{JAVASLAT_2}}</p>
+
+  <div class="pecset">
+    <span class="kor mono">&#10003;</span>
+    <span>
+      <span>{{ELLENOR_ALLAPOT}}</span><br>
+      <span class="mono" style="font-size:13px;color:var(--zold)">{{ELLENOR_RESZLET}}</span>
+    </span>
+  </div>
+
+  <footer>
+    <span class="mono">a számok forrása: scripts/ellenorzo.py · {{GENERALVA}}</span>
+    <span class="mono">nincs külső kérés · az adat a gépeden marad</span>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="Kockás Füzet — a kockás füzet, ami visszaír">
+<defs><pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#2C3330" stroke-width="1"></path></pattern></defs>
+<rect width="1200" height="320" fill="#1B1B17"></rect>
+<rect width="1200" height="320" fill="url(#g)"></rect>
+<rect x="0.5" y="0.5" width="1199" height="319" fill="none" stroke="#33332B"></rect>
+<text x="72" y="150" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="82" fill="#EDE9DC">Kockás Füzet</text>
+<text x="74" y="204" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="30" font-style="italic" fill="#A8A396">a kockás füzet, ami visszaír</text>
+<rect x="74" y="228" width="196" height="3" fill="#8FB39C"></rect>
+<text x="74" y="272" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" letter-spacing="2" fill="#A8A396">a robot nem számol · az adatod a tiéd · a pénzhez csak te nyúlsz</text>
+</svg>

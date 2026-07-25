@@ -1,6 +1,9 @@
 # Kockás Füzet
 
-**A kockás füzet, ami visszaír.**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+  <img alt="Kockás Füzet — a kockás füzet, ami visszaír" src="assets/banner.svg">
+</picture>
 
 Nyílt, ingyenes gyűjtemény, amivel a személyes és családi pénzügyeidet egy
 AI-segéd segítségével tarthatod kézben — magyarul, ítélkezés nélkül, úgy,
@@ -17,6 +20,8 @@ Gemini…) vagy a saját gépeden használsz.
 
 ## Három alapszabály
 
+![A három alapszabály: a robot nem számol, az adatod a tiéd, a pénzhez csak te nyúlsz](assets/harom-szabaly.svg)
+
 Minden, ami itt van, erre a három elvre épül:
 
 1. **A számolást nem a robot végzi.** Minden összeg táblázat-képletből vagy
@@ -31,7 +36,21 @@ Minden, ami itt van, erre a három elvre épül:
    heteket vagy hónapokat, az nem hiba, hanem a normális élet. A győzelem
    az, hogy visszatértél.
 
-## Kezdd itt: 10 perc, telepítés nélkül (1. lépcső)
+## Miért bukik el a legtöbb próbálkozás?
+
+![A hógolyó-hatás: papíron a bepótolandó nő, itt a robotmunka nem gyűlik](assets/hogolyo.svg)
+
+Nem tudás hiányzik. Kevesebbet költeni, mint amennyit keresel — ezt mindenki
+tudja. A követés a munka: minden nap beírni, kategorizálni, hó végén
+egyeztetni. Kimarad két hét, feltorlódik, már ránézni is rossz — és az egész
+elhal. Ezért itt a monoton részt a gép viszi, a visszatérés pedig soha nem
+büntetés.
+
+## Hol szállj be? Három lépcső
+
+![Három lépcső: recept 10 perc alatt, összekötés pipálgatással, teljes rendszer a saját gépen](assets/harom-lepcso.svg)
+
+### 1. lépcső — 10 perc, telepítés nélkül
 
 1. Tölts le egy havi kivonatot a netbankodból, és **töröld ki belőle a neved
    és a számlaszámokat**.
@@ -47,7 +66,7 @@ mintát — az ismert, helyes végeredményei a
 [`examples/GROUND-TRUTH.md`](examples/GROUND-TRUTH.md) fájlban vannak,
 így azt is látod, jól számolt-e.
 
-## 2. lépcső: a segéd a TE táblázatoddal dolgozik
+### 2. lépcső — a segéd a TE táblázatoddal dolgozik
 
 Ha a csevegődet összekötöd a Google Drive-oddal/naptáraddal (pipálgatós
 engedélyezés, nem programozás), a [`.claude/skills/`](.claude/skills/) receptjei már a saját
@@ -59,10 +78,15 @@ családi kassza táblázatodban dolgoznak:
 | [`havi-kor`](.claude/skills/havi-kor/SKILL.md) | Hónap eleji terv a saját számaidból + hónap végi zárás, ítélkezés nélkül |
 | [`visszateres`](.claude/skills/visszateres/SKILL.md) | Kihagyott hetek-hónapok bepótlása gyorsan, szemrehányás nélkül |
 
+A táblázat a főkönyv — és egyben az ellenőr. A kassza így néz ki, alul a
+képlettel számolt sorral, amit a gép soha nem ír:
+
+![Füzetlap-nézet: tételek, alul a képlettel számolt egyenleg-változás](assets/fuzetlap.svg)
+
 A táblázat-formátum és a beépített ellenőrző képletek leírása:
 [`templates/csaladi-kassza-sablon.md`](templates/csaladi-kassza-sablon.md).
 
-## 3. lépcső: a teljes rendszer a saját gépeden
+### 3. lépcső — a teljes rendszer a saját gépeden
 
 Haladóknak (de nem programozóknak — itt is beszélgetsz): a
 [Claude Code](https://claude.com/claude-code)-dal a teljes rendszer a
@@ -89,6 +113,51 @@ A skillek, parancsok és az automatikus ellenőrző hook a `.claude/` mappában
 vannak — a klónozás után azonnal élnek, telepíteni nem kell semmit.
 
 A felépítés állapota és a „kész" kritériumai: [`BUILD-ORDER.md`](BUILD-ORDER.md).
+
+## Mit kapsz a hónap végén?
+
+A havi zárás nem ítélet, hanem kép. A túllépés **sárga és kérdés** — sosem
+piros és vád:
+
+![Terv–tény szalag: a szabadidő keret túllépése sárgával jelölve](assets/terv-teny.svg)
+
+Minden szám alá odakerül, hogy honnan jött. Két állapot van, kettő elég:
+
+![Ellenőr-pecsét: minden szám ellenőrizve, illetve egy tétel eldöntésre vár](assets/ellenor-pecset.svg)
+
+A riportot a rendszer egyetlen, offline HTML-fájlba írja — nincs benne külső
+kérés, nyomtatható, és a dramaturgiája kötött (ami jól ment → eltérések →
+legfeljebb két javaslat):
+
+![A generált havi riport anatómiája](assets/riport-anatomia.svg)
+
+A sablon: [`templates/riport-sablon.html`](templates/riport-sablon.html).
+
+## Vásárlás előtt: „belefér?"
+
+![Belefér kártya: belefér, ha a nyaralás-keretből 20 000 átcsoportosul](assets/belefer-kartya.svg)
+
+Harminc másodperc, tényszerű kép, ítélet nélküli opciók — és a döntés a tiéd.
+
+## Kihagytál hónapokat? Az itt nem hiba
+
+![Visszatérés-naptár: három üres kocka bepótolva, a győzelem az, hogy visszatértél](assets/visszateres-naptar.svg)
+
+A [`visszateres`](.claude/skills/visszateres/SKILL.md) skill erre az egy mondatra
+épül: **a győzelem az, hogy visszajöttél.** Nincs „megint", nincs „sajnos",
+nincs lista a hátralékról — csak bepótlás, egy körben.
+
+## Oktatóanyag
+
+- **[Oktató deck](docs/oktatas/oktato-deck.html)** — egyfájlos, offline
+  bemutató (nyíllal lapozható, nyomtatható PDF-nek). Négy layoutból áll:
+
+![Négy slide-layout: cím, anekdota, szabály, ábra](assets/deck-layoutok.svg)
+
+- **[DESIGN.md](docs/DESIGN.md)** — a vizuális nyelv: színek, betűk,
+  hangnem-szabályok, és hogyan készül új ábra úgy, hogy passzoljon.
+- Az `assets/` mappa minden ábrája szabadon felhasználható (MIT) — cikkhez,
+  előadáshoz, saját fordításhoz.
 
 ## Miből lett ez?
 

@@ -32,7 +32,12 @@ description: >
    2. az eltérések, számokkal, ítélet nélkül — minden túllépésnél kérdezd
       meg: egyszeri volt, vagy a keretet kell igazítani?;
    3. legfeljebb KÉT javaslat a következő hónapra.
-4. A döntéseket (keret-módosítás, új szabály) írd a naplóba és a következő
+4. (Ha a felhasználó riportot kér) töltsd ki a
+   `templates/riport-sablon.html` sablont a szkript számaival — a sablon
+   {{...}} helyőrzőit cseréld, új elemet ne találj ki; a kimenet:
+   `penzugy/riportok/riport-<ÉÉÉÉ-HH>.html`. A dramaturgia kötött: ami jól
+   ment → eltérések → legfeljebb két javaslat.
+5. A döntéseket (keret-módosítás, új szabály) írd a naplóba és a következő
    terv alapjába.
 
 ## Hangnem

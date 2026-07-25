@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240" role="img" aria-label="Visszatérés-naptár: a kihagyott hónapok bepótolva">
+<rect width="1200" height="240" fill="#FDFCF8"></rect>
+<text x="24" y="40" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="14" letter-spacing="2" fill="#A09A89">FEBRUÁR → JÚLIUS · a bepótolt hónapok</text>
+<rect x="24.5" y="60.5" width="72" height="72" fill="#8FB39C" stroke="#CFC8B5"></rect>
+<rect x="112.5" y="60.5" width="72" height="72" fill="#8FB39C" stroke="#CFC8B5"></rect>
+<rect x="200.5" y="60.5" width="72" height="72" fill="#FBF9F1" stroke="#CFC8B5" stroke-dasharray="5 4"></rect>
+<rect x="288.5" y="60.5" width="72" height="72" fill="#FBF9F1" stroke="#CFC8B5" stroke-dasharray="5 4"></rect>
+<rect x="376.5" y="60.5" width="72" height="72" fill="#FBF9F1" stroke="#CFC8B5" stroke-dasharray="5 4"></rect>
+<rect x="464.5" y="60.5" width="72" height="72" fill="#3F6B52" stroke="#3F6B52"></rect><text x="500" y="106" text-anchor="middle" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="24" fill="#F3F6F2">✓</text>
+<text x="580" y="106" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#6B675E">← három üres kocka, egy kör alatt bepótolva</text>
+<text x="24" y="184" font-family="Georgia,&#39;Times New Roman&#39;,serif" font-size="26" font-style="italic" fill="#3F6B52">„A győzelem az, hogy visszatértél.&#34;</text>
+<text x="24" y="214" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,monospace" font-size="15" fill="#6B675E">az üres kocka szaggatott, nem piros — a hangnem-szabály grafikára fordítva</text>
+</svg>
