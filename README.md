@@ -10,6 +10,11 @@ Nem app és nem szolgáltatás: receptek, táblázat-sablonok és egy lépésekb
 felépíthető asszisztens-rendszer, amit a saját csevegődben (ChatGPT, Claude,
 Gemini…) vagy a saját gépeden használsz.
 
+> **Támogatás:** a teljes asszisztens-rendszer (skillek, parancsok,
+> automatikus ellenőrzés) jelenleg **csak [Claude Code](https://claude.com/claude-code)-dal**
+> működik. Az 1. lépcső bemásolós receptjei bármelyik AI-csevegőben
+> használhatók.
+
 ## Három alapszabály
 
 Minden, ami itt van, erre a három elvre épül:
