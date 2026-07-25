@@ -1,0 +1,16 @@
+{
+  "$comment": "Példa: a felhasználó pénzügyi repójának .claude/settings.json-jába. A kassza.csv vagy terv-*.csv bármely módosítása után automatikusan lefut a determinisztikus ellenőrzés — az agent nem tudja 'elfelejteni' a verifikációt.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "hooks/auto-ellenorzes.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

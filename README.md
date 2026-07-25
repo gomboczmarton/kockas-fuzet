@@ -1,2 +1,99 @@
-# kockas-fuzet
-A kockás füzet, ami visszaír.
+# Kockás Füzet
+
+**A kockás füzet, ami visszaír.**
+
+Nyílt, ingyenes gyűjtemény, amivel a személyes és családi pénzügyeidet egy
+AI-segéd segítségével tarthatod kézben — magyarul, ítélkezés nélkül, úgy,
+hogy az adataid a tieid maradnak.
+
+Nem app és nem szolgáltatás: receptek, táblázat-sablonok és egy lépésekben
+felépíthető asszisztens-rendszer, amit a saját csevegődben (ChatGPT, Claude,
+Gemini…) vagy a saját gépeden használsz.
+
+## Három alapszabály
+
+Minden, ami itt van, erre a három elvre épül:
+
+1. **A számolást nem a robot végzi.** Minden összeg táblázat-képletből vagy
+   ellenőrizhető, mindig ugyanúgy működő programból jön — a gép csak
+   értelmez, kérdez és jelent. (A csevegő AI-k tudnak magabiztosan
+   mellészámolni; ezért itt soha nem az ő fejszámolásuk a végeredmény.)
+2. **Az adatod a tiéd.** A rendszer a te táblázatodban, a te gépeden, a te
+   mappádban dolgozik. Nincs központi szerver, nincs regisztráció, és egy
+   mozdulattal törölhetsz mindent.
+3. **A pénzedhez csak te nyúlsz.** A segéd javasol, előkészít, kipipáltat —
+   de nem utal, nem köt le, nem szerződik. És nem ítélkezik: ha kihagytál
+   heteket vagy hónapokat, az nem hiba, hanem a normális élet. A győzelem
+   az, hogy visszatértél.
+
+## Kezdd itt: 10 perc, telepítés nélkül (1. lépcső)
+
+1. Tölts le egy havi kivonatot a netbankodból, és **töröld ki belőle a neved
+   és a számlaszámokat**.
+2. Nyisd meg a [`prompts/01-kivonat-elemzes.md`](prompts/01-kivonat-elemzes.md)
+   receptet, másold be egy AI-csevegőbe a kivonatoddal együtt.
+3. Nézd meg, mire jut — aztán jöhet a
+   [`prompts/02-havi-terv.md`](prompts/02-havi-terv.md): havi terv,
+   táblázatba illeszthető formában, ellenőrző képlettel.
+
+Nincs kedved éles adattal próbálkozni? Használd a
+[`examples/minta-kivonat.csv`](examples/minta-kivonat.csv) szintetikus
+mintát — az ismert, helyes végeredményei a
+[`examples/GROUND-TRUTH.md`](examples/GROUND-TRUTH.md) fájlban vannak,
+így azt is látod, jól számolt-e.
+
+## 2. lépcső: a segéd a TE táblázatoddal dolgozik
+
+Ha a csevegődet összekötöd a Google Drive-oddal/naptáraddal (pipálgatós
+engedélyezés, nem programozás), a [`skills/`](skills/) receptjei már a saját
+családi kassza táblázatodban dolgoznak:
+
+| Skill | Mit csinál |
+|---|---|
+| [`kivonat-konyvelo`](skills/kivonat-konyvelo/SKILL.md) | Kivonat → kassza, duplikátum-védelemmel, a kategóriákat tőled tanulja |
+| [`havi-kor`](skills/havi-kor/SKILL.md) | Hónap eleji terv a saját számaidból + hónap végi zárás, ítélkezés nélkül |
+| [`visszateres`](skills/visszateres/SKILL.md) | Kihagyott hetek-hónapok bepótlása gyorsan, szemrehányás nélkül |
+
+A táblázat-formátum és a beépített ellenőrző képletek leírása:
+[`templates/csaladi-kassza-sablon.md`](templates/csaladi-kassza-sablon.md).
+
+## 3. lépcső: a teljes rendszer a saját gépeden
+
+Haladóknak (de nem programozóknak — itt is beszélgetsz): a
+[Claude Code](https://claude.com/claude-code)-dal a teljes rendszer a
+gépeden fut, egy `penzugy/` mappán:
+
+- [`commands/havizaras.md`](commands/havizaras.md) — egyetlen parancs, ami
+  levezényli a teljes havi zárást;
+- [`commands/belefer.md`](commands/belefer.md) — vásárlás előtti gyors kép;
+- [`agents/penzugyi-ellenor.md`](agents/penzugyi-ellenor.md) — a beépített
+  ellenőr, aki minden számot a determinisztikus
+  [`scripts/ellenorzo.py`](scripts/ellenorzo.py)-val számoltat újra;
+- [`hooks/`](hooks/) — automatikus ellenőrzés minden könyvelés után, hogy a
+  verifikáció ne emlékezeten múljon.
+
+A felépítés állapota és a „kész" kritériumai: [`BUILD-ORDER.md`](BUILD-ORDER.md).
+
+## Miből lett ez?
+
+A gyűjtemény egy kutatássorozatból nőtt ki: megnéztük, mire panaszkodnak az
+emberek a pénzügyi appok kapcsán itthon és külföldön, és mibe bukik bele a
+legtöbb próbálkozás. A válasz meglepően egységes: nem tudás hiányzik, hanem
+a monoton követés fenntartása — a kimaradás utáni „hógolyó" és a rossz
+érzés, ami miatt az ember inkább rá se néz. Ezért itt minden ennek a
+kettőnek a megoldására épül: a robotmunkát a gép viszi, a visszatérés pedig
+sosem büntetés.
+
+## Szólj bele!
+
+Kísérlet vagy, nem kész termék — pont ezért vagy itt jó helyen:
+
+- **Kérdésed, ötleted, hibád van?** Nyiss egy issue-t (magyarul nyugodtan).
+- **Mire használnád? Mi hiányzik?** Ezt egy rövid, 2 perces kérdőívben is
+  elmondhatod *(link hamarosan)* — a válaszokból receptek lesznek.
+- **Fejlesztenél?** A `BUILD-ORDER.md` mutatja, hol tartunk; minden
+  változtatás előtt a minta-adatos ellenőrzésnek zölden kell futnia.
+
+## Licenc
+
+[MIT](LICENSE) — használd, alakítsd, oszd meg szabadon.
