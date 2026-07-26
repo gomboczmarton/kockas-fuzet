@@ -4,8 +4,6 @@ Kilenc rövid terminál-videó mutatja a Kockás Füzetet működés közben —
 vágatlan, valódi munkamenetek, szintetikus mintaadatokkal, hétköznapi
 personák szemével. A teljes lejátszási lista: **[Kockás Füzet — ami
 visszaír, a YouTube-on](https://www.youtube.com/playlist?list=PLcXziGNgfisQ)**.
-*(Az esetleírások végén a „videó" hivatkozás egyelőre a listára mutat —
-videónkénti linkre cserélendő, amint megvannak.)*
 
 Ez a dokumentum esetenként (use-case-enként) halad: ki a szereplő, mi a
 helyzete, mi történik a videóban, és mit bizonyít. A precíz elvárások és a
@@ -27,7 +25,7 @@ kipróbálást a szintetikus mintákkal.
 
 **Mit bizonyít:** nincs telepítő, nincs regisztráció; a bizalom nem ígéret,
 hanem lefuttatható teszt. *(Spec: [00-telepites](../../evals/scenarios/00-telepites.md) ·
-[videó](https://www.youtube.com/playlist?list=PLcXziGNgfisQ))*
+[videó](https://youtu.be/xWI9hjcE8OI))*
 
 ## 2 · Első lépcső — bemásolós recept bármelyik AI-csevegőben
 
@@ -42,7 +40,7 @@ táblázatába illeszthet.
 **Mit bizonyít:** a belépéshez elég 10 perc, és az ellenőrzés a
 felhasználónál marad — a végösszeget a táblázat képlete adja, nem a csevegő
 szövege. *(Spec: [01-elso-lepcso](../../evals/scenarios/01-elso-lepcso.md) ·
-[videó](https://www.youtube.com/playlist?list=PLcXziGNgfisQ))*
+[videó](https://youtu.be/5O1Zu-_XRUA))*
 
 ## 3 · Kivonat-könyvelő — az új havi export lekönyvelése
 
@@ -58,7 +56,7 @@ tanult szabályok a naplóba kerülnek.
 **Mit bizonyít:** a rendszer tanul, nem kérdez feleslegesen, és a
 duplikátum-védelem miatt a kupacban érkező kivonat sem okoz kárt.
 *(Spec: [02-kivonat-konyvelo](../../evals/scenarios/02-kivonat-konyvelo.md) ·
-skill: `kivonat-konyvelo` · [videó](https://www.youtube.com/playlist?list=PLcXziGNgfisQ))*
+skill: `kivonat-konyvelo` · [videó](https://youtu.be/Kw6vG6kYpWQ))*
 
 ## 4 · Belefér? — gyors kép vásárlás előtt
 
@@ -72,7 +70,7 @@ a vásárlást; a megspórolt összeg kis győzelemként a naplóba kerül.
 **Mit bizonyít:** a gép számol és felsorol, de nem mond se igent, se nemet
 — a döntés végig a felhasználóé.
 *(Spec: [03-belefer](../../evals/scenarios/03-belefer.md) · parancs:
-`/belefer` · [videó](https://www.youtube.com/playlist?list=PLcXziGNgfisQ))*
+`/belefer` · [videó](https://youtu.be/pRHHjknqvzc))*
 
 ## 5 · Havi zárás — az egész hónap egyetlen paranccsal
 
@@ -88,7 +86,7 @@ offline HTML-riport.
 **Mit bizonyít:** a hónap végi szembenézés kép, nem ítélet — a túllépés
 kérdés, sosem vád.
 *(Spec: [04-havizaras](../../evals/scenarios/04-havizaras.md) · parancs:
-`/havizaras` · [videó](https://www.youtube.com/playlist?list=PLcXziGNgfisQ))*
+`/havizaras` · [videó](https://youtu.be/njxDEUfezhI))*
 
 ## 6 · Havi terv — a következő hónap a saját számokból
 
@@ -103,7 +101,7 @@ a megtakarítás a hónap elejére tervezve.
 **Mit bizonyít:** a terv a felhasználó tényadataiból készül, nem sablonból,
 és minden számról látszik, honnan jött.
 *(Spec: [05-havi-terv](../../evals/scenarios/05-havi-terv.md) · skill:
-`havi-kor` · [videó](https://www.youtube.com/playlist?list=PLcXziGNgfisQ))*
+`havi-kor` · [videó](https://youtu.be/kBSXCizUs9U))*
 
 ## 7 · Visszatérés — kihagyott hónapok, szemrehányás nélkül
 
@@ -118,7 +116,7 @@ start.
 **Mit bizonyít:** a rendszerek jellemzően a kimaradás utáni rossz érzésnél
 halnak el — itt a visszatérés győzelem, és a bepótlás rövid.
 *(Spec: [06-visszateres](../../evals/scenarios/06-visszateres.md) · skill:
-`visszateres` · [videó](https://www.youtube.com/playlist?list=PLcXziGNgfisQ))*
+`visszateres` · [videó](https://youtu.be/PsBXVs3cRG4))*
 
 ## 8 · Előfizetés-vadászat — mire ment el a legtöbb?
 
@@ -132,7 +130,7 @@ módja is látszik. A lemondás Péter dolga marad.
 **Mit bizonyít:** „a robot ne fejszámoljon" szabály élesben — és az
 elfelejtett előfizetés információ, nem hanyagság.
 *(Spec: [07-elofizetesek](../../evals/scenarios/07-elofizetesek.md) ·
-[videó](https://www.youtube.com/playlist?list=PLcXziGNgfisQ))*
+[videó](https://youtu.be/vHRjMtXgX9I))*
 
 ## 9 · Írd fel! — készpénzes költés rögzítése menet közben
 
@@ -147,4 +145,4 @@ megy. A készpénz-kettősség kérdését a rendszer megbeszéli, nem elmaszato
 **Mit bizonyít:** így tanul a rendszer új szokást programozás nélkül —
 elmondod magyarul, és beépül.
 *(Spec: [08-gyorsrogzites](../../evals/scenarios/08-gyorsrogzites.md) ·
-[videó](https://www.youtube.com/playlist?list=PLcXziGNgfisQ))*
+[videó](https://youtu.be/IOrEgfLit98))*
