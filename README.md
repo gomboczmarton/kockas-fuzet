@@ -147,6 +147,35 @@ A [`visszateres`](.claude/skills/visszateres/SKILL.md) skill erre az egy mondatr
 épül: **a győzelem az, hogy visszajöttél.** Nincs „megint", nincs „sajnos",
 nincs lista a hátralékról — csak bepótlás, egy körben.
 
+## Videók — nézd meg működés közben
+
+Kilenc rövid terminál-videó mutatja a rendszert működés közben: vágatlan,
+valódi munkamenetek, szintetikus mintaadatokkal, hétköznapi personák
+szemével.
+
+**▶ A teljes sorozat a YouTube-on: [Kockás Füzet — ami visszaír (lejátszási
+lista)](https://www.youtube.com/playlist?list=PLcXziGNgfisQ)** — az első
+videó a telepítést mutatja, klónozástól az első zöld tesztig:
+
+[![Telepítés — az első demó-videó](https://img.youtube.com/vi/xWI9hjcE8OI/hqdefault.jpg)](https://youtu.be/xWI9hjcE8OI)
+
+| # | Persona | Eset | Skill / parancs | Videó |
+|---|---------|------|-----------------|-------|
+| 1 | bárki | telepítés: klónozástól az első zöld tesztig | `git clone` + `bash evals/run.sh` | [▶](https://youtu.be/xWI9hjcE8OI) |
+| 2 | Kata, 34 | bemásolós recept bármelyik AI-csevegőben | [`prompts/01`](prompts/01-kivonat-elemzes.md) + [`prompts/02`](prompts/02-havi-terv.md) | [▶](https://youtu.be/5O1Zu-_XRUA) |
+| 3 | Gábor, 41 | új banki kivonat lekönyvelése, dedup + tanulás | `kivonat-konyvelo` skill | [▶](https://youtu.be/Kw6vG6kYpWQ) |
+| 4 | Réka, 29 | belefér-e a 89 ezres kerékpár? | `/belefer` | [▶](https://youtu.be/pRHHjknqvzc) |
+| 5 | Anna, 38 | teljes havi zárás, riporttal | `/havizaras` | [▶](https://youtu.be/njxDEUfezhI) |
+| 6 | Bence, 33 | következő havi terv a saját számokból | `havi-kor` skill | [▶](https://youtu.be/kBSXCizUs9U) |
+| 7 | Dóri, 36 | két kihagyott hónap bepótlása, szemrehányás nélkül | `visszateres` skill | [▶](https://youtu.be/PsBXVs3cRG4) |
+| 8 | Péter, 45 | mire ment el a legtöbb? elfelejtett előfizetések | elemzés + `ellenorzo.py` | [▶](https://youtu.be/vHRjMtXgX9I) |
+| 9 | Juli, 31 | készpénzes költés rögzítése menet közben | rögzítés + napló-szabály | [▶](https://youtu.be/IOrEgfLit98) |
+
+Részletes esetleírások (use-case-enként):
+[`docs/oktatas/videok-es-forgatokonyvek.md`](docs/oktatas/videok-es-forgatokonyvek.md).
+A forgatókönyv-specifikációk (persona + elvárások): [`evals/scenarios/`](evals/scenarios/);
+a lejátszó és a felvétel-készítő: [`demo/`](demo/).
+
 ## Oktatóanyag
 
 - **[Oktató deck](docs/oktatas/oktato-deck.html)** — egyfájlos, offline

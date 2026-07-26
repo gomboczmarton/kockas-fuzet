@@ -1,0 +1,5 @@
+# A .cast fájlok a felvételek szöveges "forráskódjai" — ezek verziózva
+# vannak. A belőlük renderelt GIF/MP4 nagy bináris: YouTube-ra megy,
+# a repóba nem.
+*.gif
+*.mp4
