@@ -149,22 +149,34 @@ nincs lista a hátralékról — csak bepótlás, egy körben.
 
 ## Videók — nézd meg működés közben
 
-Minden fő folyamatról készült terminál-screencast: vágatlan, valódi
-munkamenetek szintetikus mintaadatokkal, hétköznapi felhasználó-personák
-szemével. A forgatókönyvek (persona + elvárások): [`evals/scenarios/`](evals/scenarios/);
-a lejátszó és a felvétel-készítő: [`demo/`](demo/).
+Kilenc rövid terminál-videó mutatja a rendszert működés közben: vágatlan,
+valódi munkamenetek, szintetikus mintaadatokkal, hétköznapi personák
+szemével.
 
-| Demó | Mit mutat | Videó |
-|---|---|---|
-| Telepítés | klónozástól az első zöld evalig | *(link hamarosan)* |
-| 1. lépcső | bemásolós recept bármelyik AI-csevegőben | *(link hamarosan)* |
-| Kivonat-könyvelő | új havi export lekönyvelése, dedup + tanulás | *(link hamarosan)* |
-| Belefér? | gyors vásárlási döntés-kép a boltban | *(link hamarosan)* |
-| /havizaras | teljes havi zárás egyetlen paranccsal | *(link hamarosan)* |
-| Havi terv | következő hónap terve a saját számokból | *(link hamarosan)* |
-| Visszatérés | két kihagyott hónap bepótlása, szemrehányás nélkül | *(link hamarosan)* |
-| Előfizetés-vadászat | mire ment el a legtöbb? elfelejtett előfizetések | *(link hamarosan)* |
-| Írd fel! | készpénzes költés rögzítése menet közben | *(link hamarosan)* |
+**▶ A teljes sorozat a YouTube-on: [Kockás Füzet — ami visszaír (lejátszási
+lista)](https://www.youtube.com/playlist?list=PLcXziGNgfisQ)** — az első
+videó a telepítést mutatja, klónozástól az első zöld tesztig.
+
+| # | Persona | Eset | Skill / parancs | Videó |
+|---|---------|------|-----------------|-------|
+| 1 | bárki | telepítés: klónozástól az első zöld tesztig | `git clone` + `bash evals/run.sh` | [▶](https://www.youtube.com/playlist?list=PLcXziGNgfisQ) |
+| 2 | Kata, 34 | bemásolós recept bármelyik AI-csevegőben | [`prompts/01`](prompts/01-kivonat-elemzes.md) + [`prompts/02`](prompts/02-havi-terv.md) | [▶](https://www.youtube.com/playlist?list=PLcXziGNgfisQ) |
+| 3 | Gábor, 41 | új banki kivonat lekönyvelése, dedup + tanulás | `kivonat-konyvelo` skill | [▶](https://www.youtube.com/playlist?list=PLcXziGNgfisQ) |
+| 4 | Réka, 29 | belefér-e a 89 ezres kerékpár? | `/belefer` | [▶](https://www.youtube.com/playlist?list=PLcXziGNgfisQ) |
+| 5 | Anna, 38 | teljes havi zárás, riporttal | `/havizaras` | [▶](https://www.youtube.com/playlist?list=PLcXziGNgfisQ) |
+| 6 | Bence, 33 | következő havi terv a saját számokból | `havi-kor` skill | [▶](https://www.youtube.com/playlist?list=PLcXziGNgfisQ) |
+| 7 | Dóri, 36 | két kihagyott hónap bepótlása, szemrehányás nélkül | `visszateres` skill | [▶](https://www.youtube.com/playlist?list=PLcXziGNgfisQ) |
+| 8 | Péter, 45 | mire ment el a legtöbb? elfelejtett előfizetések | elemzés + `ellenorzo.py` | [▶](https://www.youtube.com/playlist?list=PLcXziGNgfisQ) |
+| 9 | Juli, 31 | készpénzes költés rögzítése menet közben | rögzítés + napló-szabály | [▶](https://www.youtube.com/playlist?list=PLcXziGNgfisQ) |
+
+<!-- A ▶ linkek egyelőre a lejátszási listára mutatnak; ha megvannak az
+egyes videók URL-jei, itt és a docs/oktatas/videok-es-forgatokonyvek.md
+fájlban cserélendők videónkéntire. -->
+
+Részletes esetleírások (use-case-enként):
+[`docs/oktatas/videok-es-forgatokonyvek.md`](docs/oktatas/videok-es-forgatokonyvek.md).
+A forgatókönyv-specifikációk (persona + elvárások): [`evals/scenarios/`](evals/scenarios/);
+a lejátszó és a felvétel-készítő: [`demo/`](demo/).
 
 ## Oktatóanyag
 
