@@ -5,6 +5,10 @@ demó-sorszámokat követi (00→1 … 08→9) — ha a lejátszási listád má
 sorrendben van, csak az „x/9" számokat és az „◄ EZT NÉZED MOST" jelölőt
 igazítsd. A `[LEJÁTSZÁSI LISTA LINKJE]` helyére illeszd be a playlist URL-jét.
 
+Limit-ellenőrzés (2026-07-26): minden leírás 1 900–2 079 karakter — a
+YouTube 5 000 karakteres leírás-határának bőven alatta, a playlist-link
+beillesztése után is. A címek 55–82 karakteresek (a címlimit 100).
+
 ---
 
 ## 1. videó (DEMÓ 00)
