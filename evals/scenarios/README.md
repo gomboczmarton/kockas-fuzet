@@ -26,9 +26,12 @@ A forgatókönyvek két célt szolgálnak egyszerre:
 | 04 | [04-havizaras.md](04-havizaras.md) | `/havizaras` parancs | Anna, 38 |
 | 05 | [05-havi-terv.md](05-havi-terv.md) | `havi-kor` skill (tervezés) | Bence, 33 |
 | 06 | [06-visszateres.md](06-visszateres.md) | `visszateres` skill | Dóri, 36 |
+| 07 | [07-elofizetesek.md](07-elofizetesek.md) | elemzés a kasszán (cikk-példa) | Péter, 45 |
+| 08 | [08-gyorsrogzites.md](08-gyorsrogzites.md) | gyors-rögzítés + napló-szabály | Juli, 31 |
 
 A `nyaralas-tervezo` skill stub (M3 mérföldkő) — forgatókönyv majd a
-kidolgozásakor készül hozzá.
+kidolgozásakor készül hozzá. A cikkvázlatok jeleneteinek leképezése a
+demókra (a hiányokkal együtt): [CIKK-TERKEP.md](CIKK-TERKEP.md).
 
 ## Közös rubrika (minden forgatókönyvre érvényes)
 
@@ -41,3 +44,5 @@ kidolgozásakor készül hozzá.
   kérdések összegyűjtve, egy körben érkeznek.
 - **A pénzhez nem nyúl**: javaslat és előkészítés van, utalás/lekötés
   kezdeményezése nincs.
+- **Magyarul**: minden demó-interakció (persona-üzenet és válasz) magyar
+  nyelvű.

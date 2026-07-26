@@ -163,6 +163,8 @@ a lejátszó és a felvétel-készítő: [`demo/`](demo/).
 | /havizaras | teljes havi zárás egyetlen paranccsal | *(link hamarosan)* |
 | Havi terv | következő hónap terve a saját számokból | *(link hamarosan)* |
 | Visszatérés | két kihagyott hónap bepótlása, szemrehányás nélkül | *(link hamarosan)* |
+| Előfizetés-vadászat | mire ment el a legtöbb? elfelejtett előfizetések | *(link hamarosan)* |
+| Írd fel! | készpénzes költés rögzítése menet közben | *(link hamarosan)* |
 
 ## Oktatóanyag
 

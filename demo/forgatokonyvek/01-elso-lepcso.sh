@@ -20,3 +20,5 @@ TURNS=(
   "${RECEPT1/\[IDE MÁSOLD A KIVONATOT\]/$KIVONAT}"
   "$RECEPT2"
 )
+
+OUTRO="— vége · 0. szint: az ellenőrzés a tiéd — a kapott képlet a saját táblázatodban számol —"

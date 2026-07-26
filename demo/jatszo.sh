@@ -21,6 +21,7 @@ LEPESEK=()
 TURNS=()
 NEV="Te"
 PERSONA=""
+OUTRO="— vége · minden összeg a scripts/ellenorzo.py kimenetéből származik —"
 # shellcheck source=/dev/null
 source "$1"
 
@@ -69,5 +70,5 @@ for turn in "${TURNS[@]:-}"; do
   sleep 0.8
 done
 
-printf '\033[2m%s\033[0m\n' "— vége · minden összeg a scripts/ellenorzo.py kimenetéből származik —"
+printf '\033[2m%s\033[0m\n' "$OUTRO"
 sleep 1.5

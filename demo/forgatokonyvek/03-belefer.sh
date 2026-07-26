@@ -3,7 +3,7 @@
 source "$REPO_ROOT/demo/kozos.sh"
 
 CIM="Belefér? — gyors kép vásárlás előtt"
-PERSONA="Réka, 29 — a boltban áll, harminc másodperce van dönteni"
+PERSONA="Réka, 29 — egy 89 ezres kerékpárt nézeget, fél perce van dönteni"
 NEV="Réka"
 MUNKA_DIR="$OTTHON/kockas-fuzet"
 
@@ -15,6 +15,6 @@ setup() {
 }
 
 TURNS=(
-  "/belefer 8990 forintos társasjáték, szabadidő kategória"
-  "Igazad van, most kihagyom — de jegyezd fel, hogy ez megvolt bennem, és megspóroltam."
+  "/belefer 89 000 forintos kerékpár, közlekedés kategória"
+  "Értem, most kihagyom — de jegyezd fel, hogy ez megvolt bennem, és megspóroltam."
 )
