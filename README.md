@@ -147,6 +147,23 @@ A [`visszateres`](.claude/skills/visszateres/SKILL.md) skill erre az egy mondatr
 épül: **a győzelem az, hogy visszajöttél.** Nincs „megint", nincs „sajnos",
 nincs lista a hátralékról — csak bepótlás, egy körben.
 
+## Videók — nézd meg működés közben
+
+Minden fő folyamatról készült terminál-screencast: vágatlan, valódi
+munkamenetek szintetikus mintaadatokkal, hétköznapi felhasználó-personák
+szemével. A forgatókönyvek (persona + elvárások): [`evals/scenarios/`](evals/scenarios/);
+a lejátszó és a felvétel-készítő: [`demo/`](demo/).
+
+| Demó | Mit mutat | Videó |
+|---|---|---|
+| Telepítés | klónozástól az első zöld evalig | *(link hamarosan)* |
+| 1. lépcső | bemásolós recept bármelyik AI-csevegőben | *(link hamarosan)* |
+| Kivonat-könyvelő | új havi export lekönyvelése, dedup + tanulás | *(link hamarosan)* |
+| Belefér? | gyors vásárlási döntés-kép a boltban | *(link hamarosan)* |
+| /havizaras | teljes havi zárás egyetlen paranccsal | *(link hamarosan)* |
+| Havi terv | következő hónap terve a saját számokból | *(link hamarosan)* |
+| Visszatérés | két kihagyott hónap bepótlása, szemrehányás nélkül | *(link hamarosan)* |
+
 ## Oktatóanyag
 
 - **[Oktató deck](docs/oktatas/oktato-deck.html)** — egyfájlos, offline
