@@ -9,14 +9,15 @@ szabadkozva tér vissza.
 
 - `penzugy/kassza.csv` utolsó dátuma 2026-05-30 (≈2 hónap kihagyás).
 - `penzugy/terv-2026-06.csv` és `terv-2026-07.csv` megvan.
-- `penzugy/kivonatok/` = júniusi és júliusi banki export, bennük két
-  ismeretlen partner (FOGORVOSI RENDELO, KIFLI.HU).
+- `penzugy/kivonatok/` = júniusi és júliusi banki export, bennük három —
+  Dóri májusi kasszája számára — ismeretlen partner (FOGORVOSI RENDELO,
+  KIFLI.HU, HAVI RENDEZVENY).
 
 ## Forgatókönyv
 
 1. „Szia… májusban néztem rá utoljára, azóta csak gyűltek a kivonatok.
    Bepótolnám végre, ha nem gond."
-2. „A fogorvos egeszseg, a Kifli elelmiszer."
+2. „A fogorvos egeszseg, a Kifli elelmiszer, a rendezvény szabadido."
 
 ## Elvárások (hangnem-rubrika — ez itt a fő mérce)
 

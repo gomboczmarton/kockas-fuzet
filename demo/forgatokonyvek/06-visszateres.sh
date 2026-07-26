@@ -19,5 +19,5 @@ setup() {
 
 TURNS=(
   "Szia… májusban néztem rá utoljára, azóta csak gyűltek a kivonatok. Bepótolnám végre, ha nem gond."
-  "A fogorvos menjen az egeszseg kategóriába, a Kifli az elelmiszer. Köszi, hogy nem csináltál belőle ügyet."
+  "A fogorvos menjen az egeszseg kategóriába, a Kifli az elelmiszer, a rendezvény pedig a szokásos havi klubestünk — az szabadido. Köszi, hogy nem csináltál belőle ügyet."
 )
