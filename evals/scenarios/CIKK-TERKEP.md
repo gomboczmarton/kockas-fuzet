@@ -1,9 +1,8 @@
 # Cikk → demó térkép
 
-A két cikkvázlat (a personal-finances-and-ai-agents repóban:
-`article/drafts/2026-07-23-ai-csaladi-koltsegvetes-kiszamolo-stilus.md` és
-`article/drafts/2026-07-23-csevegotol-az-ugynokig-kiszamolo-stilus.md`)
-jelenetei és a demó-forgatókönyvek megfelelése. A cél: minden cikkbeli
+A két készülő cikkvázlat — 1. „Rendbe rakja-e az AI a pénzügyeidet?" és
+2. „Amikor a robot már a naptáradba ír" (a kutatás-repó `article/drafts/`
+mappájában) — jelenetei és a demó-forgatókönyvek megfelelése. A cél: minden cikkbeli
 állítás mögé odatehető legyen egy vágatlan videó.
 
 ## 1. cikk — „Rendbe rakja-e az AI a pénzügyeidet?"
