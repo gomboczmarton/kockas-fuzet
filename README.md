@@ -112,6 +112,26 @@ cd kockas-fuzet && claude
 A skillek, parancsok és az automatikus ellenőrző hook a `.claude/` mappában
 vannak — a klónozás után azonnal élnek, telepíteni nem kell semmit.
 
+#### A terminál mint füzetlap
+
+A felület két rétegben jön, és egyik sem számol: mindkettő a
+[`scripts/fuzetallapot.py`](scripts/fuzetallapot.py) kimenetéből rajzol, az
+pedig az `ellenorzo.py` számaiból.
+
+1. **Stabil réteg** ([`.claude/settings.json`](.claude/settings.json)) — a
+   prompt alatti státuszsor (`▦ Kockás Füzet · 2026-07 · ✓ ellenőrizve`),
+   magyar pörgettyű-szavak és tippek. Minden Claude Code-ban működik, amint
+   a mappát megbízhatónak jelölöd (az első indításkor kérdezi).
+2. **Mod** ([`.claude/skills/kockas-felulet/`](.claude/skills/kockas-felulet/)) —
+   a prompt fölötti füzetsor (az utolsó 12 hónap négyzetei, a döntést kérő
+   kategóriák), a `/fuzetlap` panel szalagokkal (asztali appban SVG-ként),
+   és egy nyugta minden könyvelés után. A mod a Claude Code korai hozzáférésű
+   kiegészítő-rendszerén fut: ha nálad még nincs bekapcsolva, egyszerűen nem
+   jelenik meg, és minden más ugyanúgy működik.
+
+Hosszabb szünet után a felület nem mutat kihagyott hónapokat — csak annyit
+mond: *jó, hogy itt vagy*.
+
 A felépítés állapota és a „kész" kritériumai: [`BUILD-ORDER.md`](BUILD-ORDER.md).
 
 ## Mit kapsz a hónap végén?

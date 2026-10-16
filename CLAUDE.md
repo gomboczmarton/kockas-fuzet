@@ -59,7 +59,11 @@ ajánld fel a kipróbálást az `examples/` szintetikus mintáival.
 - `.claude/skills/` — kivonat-konyvelo, havi-kor, visszateres (+ stubok)
 - `.claude/agents/penzugyi-ellenor.md` — verifikátor subagent
 - `.claude/commands/` — havizaras, belefer
-- `.claude/hooks/` + `.claude/settings.json` — automatikus ellenőrzés
+- `.claude/hooks/` + `.claude/settings.json` — automatikus ellenőrzés;
+  a settings-ben a stabil felület-réteg is (statusLine, spinnerVerbs, tippek)
+- `.claude/skills/kockas-felulet/` — terminál-mod (füzetsor, `/fuzetlap`);
+  csak rajzol: a számok a `scripts/fuzetallapot.py` → `ellenorzo.py`
+  láncból jönnek. Mod-változtatás után: `claude plugin test` ugyanitt.
 - `scripts/` — determinisztikus eszközök (Decimal-pontos)
 - `prompts/`, `templates/` — a telepítés nélküli (0. szintű) belépő réteg
 - `examples/` — szintetikus minta-adatok + GROUND-TRUTH
