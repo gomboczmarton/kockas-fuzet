@@ -132,6 +132,13 @@ pedig az `ellenorzo.py` számaiból.
 Hosszabb szünet után a felület nem mutat kihagyott hónapokat — csak annyit
 mond: *jó, hogy itt vagy*.
 
+#### Claude Code nélkül
+
+A tudás hordozható: skill-csomag a Claude.ai-hoz, ChatGPT-hez és Geminihez,
+valamint egy helyi MCP szerver a Claude Desktophoz, amely a havi lapot
+szalagokkal rajzolja. Mit kapsz, hol van az adat, mi marad ki:
+[`hordozhato/README.md`](hordozhato/README.md).
+
 A felépítés állapota és a „kész" kritériumai: [`BUILD-ORDER.md`](BUILD-ORDER.md).
 
 ## Mit kapsz a hónap végén?
