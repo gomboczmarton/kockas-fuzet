@@ -1,0 +1,7 @@
+{
+  "name": "kockas-felulet",
+  "version": "0.1.0",
+  "description": "A Kockás Füzet terminál-felülete: füzetsor a prompt fölött, Füzetlap-panel, magyar pörgettyű. Minden számot a scripts/ellenorzo.py ad; a felület nem számol.",
+  "author": { "name": "Kockás Füzet" },
+  "types": "./types/index.d.ts"
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Füzetlap</title>
+<style>
+  /* docs/DESIGN.md: papír, kockás rács, serif a szó, mono a gép száma, piros nincs */
+  :root { --papir:#FBF9F1; --racs:#E3EBF0; --tinta:#23231F; --halk:#6B675E; --keret:#CFC8B5;
+          --zold:#3F6B52; --teny:#8FB39C; --sarga:#C9A642; --sargaalap:#E8C76A; --maradek:#F2EFE6; }
+  [data-tema="dark"] { --papir:#1C1C19; --racs:#2A2A26; --tinta:#ECEAE2; --halk:#A8A496; --keret:#3A3934;
+          --zold:#8FB39C; --teny:#6F9A81; --sarga:#E8C76A; --sargaalap:#C9A642; --maradek:#2A2A26; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--papir); color:var(--tinta);
+         background-image:linear-gradient(var(--racs) 1px,transparent 1px),linear-gradient(90deg,var(--racs) 1px,transparent 1px);
+         background-size:24px 24px; font-family:Georgia,'Times New Roman',serif; }
+  main { padding:16px 18px 14px; }
+  header { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:10px; }
+  h1 { font-size:20px; font-weight:normal; margin:0; }
+  .pecset, .szam, footer, .osszesito { font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace; }
+  .pecset { font-size:12px; color:var(--zold); white-space:nowrap; }
+  .pecset.dontes { color:var(--sarga); }
+  .sor { display:grid; grid-template-columns:minmax(80px,120px) 1fr auto; gap:10px; align-items:center; margin:6px 0; }
+  .kat { font-size:14px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .szalag { display:flex; height:14px; border:1px solid var(--keret); background:var(--maradek); }
+  .szalag .bent { background:var(--teny); } .szalag .felett { background:var(--sargaalap); }
+  .szam { font-size:12px; color:var(--halk); text-align:right; white-space:nowrap; }
+  .szam .tullep { color:var(--sarga); }
+  .osszesito { font-size:12px; margin-top:12px; }
+  footer { font-size:11px; color:var(--halk); margin-top:6px; }
+  .ures { font-size:15px; }
+</style>
+</head>
+<body>
+<main id="lap"><p class="ures">A Füzetlap az ellenorzo.py kimenetéből rajzol…</p></main>
+<script>
+  // MCP Apps híd (JSON-RPC 2.0 postMessage-en). A nézet nem számol: minden
+  // kiírt szám a tool-result structuredContent-jéből jön, betű szerint; csak
+  // a szalag hossza (geometria) származtatott.
+  const FORRAS = 'Minden szám: scripts/ellenorzo.py · a felület nem számol';
+  const varo = new Map(); let kovId = 1;
+  const kuld = m => window.parent.postMessage(m, '*');
+  const keres = (method, params) => new Promise(ok => { const id = kovId++; varo.set(id, ok); kuld({ jsonrpc:'2.0', id, method, params }); });
+  const ft = s => { const neg = s.startsWith('-'); const [e, t] = s.replace(/^[-+]/, '').split('.');
+    return (neg ? '−' : '') + e.replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + (t ? ',' + t : ''); };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
+  const tema = t => { document.documentElement.dataset.tema = t === 'dark' ? 'dark' : 'light'; };
+  const meret = () => kuld({ jsonrpc:'2.0', method:'ui/notifications/size-changed',
+    params:{ width: document.documentElement.scrollWidth, height: document.documentElement.scrollHeight } });
+
+  function szalag(t) {
+    const keret = Number(t.keret), teny = Math.max(0, Number(t.teny));
+    if (!(keret > 0)) return [0, teny > 0 ? 100 : 0];
+    const arany = teny / keret;
+    return arany <= 1 ? [arany * 100, 0] : [100 / arany, 100 - 100 / arany];
+  }
+
+  function rajzol(a) {
+    const lap = document.getElementById('lap'); const n = a && a.nezet;
+    if (!a || a.helyzet === 'visszateres') { lap.innerHTML = '<p class="ures">Jó, hogy itt vagy. Ha szeretnéd, együtt rendbe tesszük a füzetet.</p>'; return meret(); }
+    if (a.helyzet !== 'havi' || !n || n.allapot === 'hiba') { lap.innerHTML = '<p class="ures">A Füzetlap a könyvelt hónapot mutatja — még nincs mit.</p>'; return meret(); }
+    const rendben = n.allapot === 'rendben';
+    const sorok = (n.terv_teny || []).map(t => { const [bent, felett] = szalag(t);
+      const jel = t.allapot === 'tullepes' ? ` <span class="tullep">+${esc(ft(t.tullepes))} ◆</span>` : '';
+      return `<div class="sor" data-kategoria="${esc(t.kategoria)}"><span class="kat">${esc(t.kategoria)}</span>` +
+        `<span class="szalag"><span class="bent" style="width:${bent.toFixed(2)}%"></span><span class="felett" style="width:${felett.toFixed(2)}%"></span></span>` +
+        `<span class="szam">${esc(ft(t.teny))} / ${esc(ft(t.keret))}${jel}</span></div>`; }).join('');
+    lap.innerHTML = `<header><h1>Füzetlap · ${esc(n.honap)}</h1><span class="pecset${rendben ? '' : ' dontes'}">${rendben ? '✓ ellenőrizve' : '◆ döntést kér'} · ${esc(a.frissitve || '')}</span></header>` +
+      sorok +
+      `<div class="osszesito">Bevétel ${esc(ft(n.bevetel))} · Kiadás ${esc(ft(n.kiadas))} · Megtakarítás ${esc(ft(n.atvezetes))} · Egyenleg-változás ${esc(n.egyenleg_valtozas.startsWith('-') ? ft(n.egyenleg_valtozas) : '+' + ft(n.egyenleg_valtozas))}</div>` +
+      `<footer>${FORRAS}</footer>`;
+    meret();
+  }
+
+  window.addEventListener('message', ev => {
+    const m = ev.data; if (!m || m.jsonrpc !== '2.0') return;
+    if (m.id !== undefined && !m.method && varo.has(m.id)) { varo.get(m.id)(m.result || {}); varo.delete(m.id); return; }
+    if (m.method === 'ui/notifications/tool-result') rajzol(m.params && m.params.structuredContent);
+    if (m.method === 'ui/notifications/host-context-changed' && m.params && m.params.theme) tema(m.params.theme);
+  });
+
+  (async () => {
+    const r = await keres('ui/initialize', { appInfo:{ name:'kockas-fuzet-fuzetlap', version:'0.1.0' },
+      appCapabilities:{ availableDisplayModes:['inline'] }, protocolVersion:'2026-01-26' });
+    tema(r.hostContext && r.hostContext.theme);
+    kuld({ jsonrpc:'2.0', method:'ui/notifications/initialized', params:{} });
+  })();
+</script>
+</body>
+</html>

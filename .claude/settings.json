@@ -1,4 +1,30 @@
 {
+  "statusLine": {
+    "type": "command",
+    "command": "python3 scripts/fuzetallapot.py --sor",
+    "padding": 0
+  },
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Lapozok",
+      "Rendezem a füzetet",
+      "Kockát töltök",
+      "Vonalzót igazítok",
+      "Hegyezem a ceruzát",
+      "Kipipálom"
+    ]
+  },
+  "spinnerTipsOverride": {
+    "excludeDefault": true,
+    "tips": [
+      "/belefer 25000 cipő — gyors kép arról, belefér-e a hónapba",
+      "/havizaras — a hónap zárása egyben: könyvelés, terv–tény, jelentés",
+      "/fuzetlap — a hónap terv–tény lapja szalagokkal",
+      "Minden szám az ellenorzo.py-ból jön: a modell nem számol",
+      "Hosszabb szünet után elég ennyi: „rég nem néztem rá” — öt perc, szemrehányás nélkül"
+    ]
+  },
   "hooks": {
     "PostToolUse": [
       {
