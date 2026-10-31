@@ -188,6 +188,17 @@ a lejátszó és a felvétel-készítő: [`demo/`](demo/).
 - Az `assets/` mappa minden ábrája szabadon felhasználható (MIT) — cikkhez,
   előadáshoz, saját fordításhoz.
 
+## Testvérprojekt: Belay
+
+Ugyanerre az alapra épül a [Belay](https://github.com/gomboczmarton/adhd-personal-finance-belay):
+angol nyelvű pénzügyi társ ADHD-s felnőtteknek. Ugyanaz a három szabály, más
+élethelyzet. Egy pillantásra, miben különböznek, és melyik kérdésre melyik
+válaszol:
+
+[![Kockás Füzet vagy Belay? Összehasonlítás tipikus felhasználói kérdésekkel](assets/kockas-fuzet-vs-belay.svg)](docs/osszehasonlitas.md)
+
+Ugyanez szövegesen, táblázatban: [`docs/osszehasonlitas.md`](docs/osszehasonlitas.md).
+
 ## Miből lett ez?
 
 A gyűjtemény egy kutatássorozatból nőtt ki: megnéztük, mire panaszkodnak az

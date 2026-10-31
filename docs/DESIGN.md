@@ -62,6 +62,8 @@ assets/
   visszateres-naptar.svg         kihagyott hónapok bepótolva
   deck-layoutok.svg              a négy slide-sablon
   riport-anatomia.svg            a generált havi riport szerkezete
+  kockas-fuzet-vs-belay.svg      összehasonlítás a testvérprojekttel (Belay),
+                                 a docs/osszehasonlitas.md táblázatából
 templates/riport-sablon.html     kitöltendő, offline havi riport
 docs/oktatas/oktato-deck.html    egyfájlos oktató bemutató
 ```
