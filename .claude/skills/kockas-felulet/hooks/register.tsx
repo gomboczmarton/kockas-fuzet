@@ -83,11 +83,16 @@ export const register: Register = on => {
     return next(e)
   })
 
-  on('command.run', { command: 'fuzetlap' }, async $ => {
+  on('command.run', { command: 'fuzetlap' }, async ($, e) => {
     const a = await frissit($)
     const { isPlaced } = await $.ui.open({ id: PANEL, title: 'Füzetlap' })
-    // ahol nincs felület (pl. -p, SDK), ugyanaz szövegként
-    return isPlaced ? { text: 'Füzetlap megnyitva.' } : { text: a ? fuzetlapMarkdown(a) : FORRAS_SOR }
+    // Szövegként jön, ahol nincs felület (pl. -p, SDK), és ha telefonról vagy a
+    // claude.ai-ról kérdeznek (Remote Control): a panel ilyenkor a gép
+    // termináljában nyílik meg, amit senki sem néz
+    const tavolrol = e.origin.kind === 'bridge'
+    return isPlaced && !tavolrol
+      ? { text: 'Füzetlap megnyitva.' }
+      : { text: a ? fuzetlapMarkdown(a) : FORRAS_SOR }
   })
 
   on('ui.render', { component: 'AbovePrompt' }, async ($, e, next) => {

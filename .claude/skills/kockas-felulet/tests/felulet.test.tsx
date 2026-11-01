@@ -183,6 +183,17 @@ describe('Füzetlap', () => {
     expect(ki.text ?? '').toContain('| szabadido | 15 000 | 10 000 | +5 000 · döntést kér |')
   })
 
+  test('/fuzetlap Remote Controlon: a panel a terminálban nyílik, a telefon a táblázatot kapja', async ($, on) => {
+    alap(on) // a panel elhelyezhető, mint amikor egy terminál is rá van kötve
+    await indit($)
+    const futtat = (kind: string) => $.command.run({
+      command: 'fuzetlap', args: '', origin: { kind } as never,
+      presentation: { isFullscreen: true, columns: 120 } as never,
+    })
+    expect((await futtat('bridge')).text ?? '').toContain('| szabadido | 15 000 | 10 000 | +5 000 · döntést kér |')
+    expect((await futtat('composer')).text).toBe('Füzetlap megnyitva.')
+  })
+
   test('a kassza módosítása után nyugta-buborék, számok nélkül', async ($, on) => {
     const toasts = alap(on)
     on('tool.call', () => ({ result: {}, text: 'ok' }) as never)

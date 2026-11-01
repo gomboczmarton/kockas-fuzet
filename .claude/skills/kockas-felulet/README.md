@@ -15,7 +15,9 @@ telepítés nem kell. Fejlesztéshez: `claude --plugin-dir .claude/skills/kockas
 | prompt alatt (`PromptHint`) | `· /fuzetlap · /belefer` tipp üres promptnál | terminál |
 
 Ahol a panel nem jelenhet meg (nincs rajzoló felület), a `/fuzetlap` ugyanazt
-markdown-táblaként adja vissza.
+markdown-táblaként adja vissza. Akkor is, ha telefonról vagy a claude.ai-ról,
+Remote Controlon kérdezed: a mod ott nem rajzol, a panel a gép termináljában
+nyílna meg, ezért a táblázat a válaszban érkezik.
 
 ## Szabályok, amiket a tesztek őriznek
 
